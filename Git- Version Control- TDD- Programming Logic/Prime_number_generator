@@ -1,0 +1,8 @@
+def prime_number_generator(number):
+    if isinstance (number, integer):
+        prime_list = []
+        y = 2
+        for x in range(2, number):
+            if x % y == 0:
+                prime_list.append(x)
+    return prime_list
