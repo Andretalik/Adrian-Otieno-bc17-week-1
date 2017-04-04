@@ -1,17 +1,16 @@
 import unittest
-from prime_number_generator import prime_number_generator
+from prime_generator import prime_number_generator
 
 
 class primeNumberGenerator(unittest.TestCase):
     def test_if_input_number(self):
-        self.assertEquals(prime_number_generator(K), 'Invalid Input')
+        self.assertEquals(prime_number_generator('xkas'), 'Invalid Input')
 
     def test_if_number_positive(self):
         self.assertEquals(prime_number_generator(-3), 'Only Positive numbers')
 
     def test_if_correct_prime_numbers(self):
-        self.assertEquals(prime_number_generator(50), (2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47))
+        self.assertEquals(prime_number_generator(50), [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47])
 
     def test_if_no_input_no_return_answer(self):
-        self.assertEquals(prime_number_generator(), None)
-        
+        self.assertEquals(prime_number_generator(0), [])
