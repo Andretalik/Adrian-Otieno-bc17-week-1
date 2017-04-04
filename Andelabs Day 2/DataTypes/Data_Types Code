@@ -1,0 +1,21 @@
+def data_type(thevalue):
+    if isinstance(thevalue, str):
+        return len(thevalue)
+    elif thevalue is None:
+        return 'no value'
+    elif isinstance(thevalue, bool):
+        return thevalue
+    elif isinstance(thevalue, int):
+        if thevalue < 100:
+            return 'less than 100'
+        elif thevalue > 100:
+            return 'more than 100'
+        else:
+            return 'equal to 100'
+    elif isinstance(thevalue, list):
+        if (len(thevalue)) <= 2:
+            return None
+        else:
+            return thevalue[2]
+    else:
+      return 'Invalid Input'
