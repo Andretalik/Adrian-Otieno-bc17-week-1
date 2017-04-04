@@ -1,0 +1,14 @@
+def fizzBuzz(num):
+    if not isinstance(num, int):
+        return 'Invalid argument'
+    elif (num < 0):
+        return 'Invalid argument'
+    else:
+        if (num % 3 == 0) and (num % 5 == 0):
+            return ('fizzBuzz')
+        elif (num % 3 == 0):
+            return ('fizz')
+        elif (num % 5 == 0):
+            return ('buzz')
+        else:
+            return (num)
