@@ -1,0 +1,25 @@
+import unittest
+from data_types import data_type
+
+
+class DataTypeTestCase(unittest.TestCase):
+    def test_none_type(self):
+        self.assertEquals(data_type(None), 'no value')
+
+    def test_array_type(self):
+        self.assertEquals(data_type([1, 2, 3]), 3)
+
+    def test_small_array_type(self):
+        self.assertEquals(data_type([1, 2]), None)
+
+    def test_small_booleans_type(self):
+        self.assertEquals(data_type(True), True)
+
+    def test_small_integer_type(self):
+        self.assertEquals(data_type(3), 'less than 100')
+
+    def test_large_integer_type(self):
+        self.assertEquals(data_type(200), 'more than 100')
+
+    def test_str_type(self):
+        self.assertEquals(data_type('andela'), 6)
