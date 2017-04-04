@@ -1,0 +1,24 @@
+class Pet(object):
+    def __init__(self, number_of_legs=4):
+        self.number_of_legs = number_of_legs
+
+    def count_legs(self):
+        return "I have %d legs" % self.number_of_legs
+
+
+class Dog(Pet):
+    def call_mate(self):
+        return "Woof"
+
+
+class Cat(Pet):
+    def call_mate(self):
+        return "Meow"
+
+
+class Bird(Pet):
+    def __init__(self, number_of_legs=2):
+        self.number_of_legs=number_of_legs
+
+    def call_mate(self):
+        return "Chirp"
