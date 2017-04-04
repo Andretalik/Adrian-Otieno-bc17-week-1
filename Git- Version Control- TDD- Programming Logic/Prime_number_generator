@@ -1,8 +1,16 @@
-def prime_number_generator(number):
-    if isinstance (number, integer):
-        prime_list = []
-        y = 2
-        for x in range(2, number):
-            if x % y == 0:
-                prime_list.append(x)
-    return prime_list
+def prime_number_generator(x):
+
+    if not isinstance(x, int):
+        return 'Invalid Input'
+    elif x < 0:
+            return 'Only Positive numbers'
+    else:
+        prime_result = []
+        for x in range(1, (x+1)):
+            if x > 1:
+                for i in range(2, x):
+                    if (x % i) == 0:
+                        break
+                else:
+                    prime_result.append(x)
+        return prime_result

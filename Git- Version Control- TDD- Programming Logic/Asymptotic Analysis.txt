@@ -1,0 +1,4 @@
+from the loops of the Prime Number Generator, it is clear that that its Big-O notation  is O(n^2).
+this is due to the nested loop within the code.
+I optimized on the program working correctly rather that alot faster due to the fast approaching deadline, and also my belief that it is better for a program to be slow yet gives the correct result rather than be extremely fast and give incorrect results.
+If I had more time I would have been able to optimize it's speed as well.
