@@ -3,7 +3,12 @@ def words(sentence):
         split_sentence = sentence.split()
         result_dict = {}
         for word in split_sentence:
-            #print(word) : this was and still could be used for debugging purposes
+            # print(word) : this was and still could be used for debugging purposes
+
+            if word.isdigit():
+                if int(word) in result_dict:
+                    result_dict[int(word)] += 1
+                    continue
             if word in result_dict:
                 if word.isdigit():
                     word = int(word)
@@ -17,6 +22,3 @@ def words(sentence):
                 else:
                     result_dict[word] = 1
     return result_dict
-    else:
-        return "Only sentences accepted"
-    
