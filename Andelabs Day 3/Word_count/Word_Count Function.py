@@ -17,3 +17,6 @@ def words(sentence):
                 else:
                     result_dict[word] = 1
     return result_dict
+    else:
+        return "Only sentences accepted"
+    
